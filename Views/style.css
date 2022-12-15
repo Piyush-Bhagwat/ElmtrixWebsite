@@ -21,7 +21,8 @@ h2{
     font-weight: 700;
     text-align: center;
     font-size: 4em;
-    padding: 7%;
+    padding: 5%;
+    margin: 0;
     padding-top: 2%;
 }
 
@@ -37,6 +38,10 @@ p{
 
 section{
     padding: 2% 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 img{
@@ -47,6 +52,8 @@ img{
 
 #navigation{
     display: flex;
+    flex-direction: row;
+    height: 8vh;
     position: fixed;
     width: 100%;
     padding: 1% 10% 6px;
@@ -92,6 +99,9 @@ img{
 }
 
 /* Contact */
+#contact{
+    height: 60vh;
+}
 .contactBox{
     display: flex;
     flex-direction: column;
@@ -102,6 +112,7 @@ img{
 
 /* Footer */
 #footer{
+    height: 60vh;
     background-color: #282533;
     color: #fff;
 }
@@ -194,11 +205,20 @@ img{
 
 .imgCard{
     text-align: center;
-    padding: 3%;
+    padding: 1.5% 4%;
+    width: 25%;
 }
 
 .imgCard img{
     margin-bottom: 6%;
+}
+
+.cardContainer{
+    display: flex;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .button:hover {
