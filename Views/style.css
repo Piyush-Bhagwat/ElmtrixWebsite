@@ -64,7 +64,7 @@ img{
     z-index: 1000;
 }
 
-.navLinks ul{
+.navLinks{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -74,13 +74,28 @@ img{
 .navLinks li a{
     text-decoration: none;
     color: #282533;
-    padding: 2% 0;
-    margin-left: 4vw;
+    display: inline-block;
+    padding: 0px 10px;
+    margin: 0px 10px;
 }
 
 #navigation .logo{
     width: 50px;
 }
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 2px;
+    transition: 0.4s ease;
+}
+
 /* Title */
 #home{
     padding-top: 4%;
@@ -258,4 +273,128 @@ img{
     transition: all 2s ease 0.3s;
     transform: translateX(0);
     opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    section{
+        height: fit-content;
+    }
+    body, html{
+        overflow-x: hidden;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 3em;
+    }
+
+    h3{
+        font-size: 1.3em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    .show{
+        transition: all 1s ease;
+    }
+    .spaceApart{
+        align-items: center;
+    }
+    .button{
+        margin-bottom: 14%;
+        margin-top: 8px;
+    }
+    #home{
+        padding-top: 20%;
+    }
+
+    #home p{
+        line-height: 1.6;
+    }
+
+    #navigation{
+        backdrop-filter: none;
+        background-color: #fff;
+        position: fixed;
+    }
+
+    #contact{
+        height: max-content;
+    }
+
+    .contactBox{
+        align-items: center;
+    }
+    #footer{
+        height: max-content;
+        align-items: center;
+    }
+
+    #footer .left{
+        align-items: center;
+    }
+
+    #footer .right{
+        align-items: center;
+    }
+    .navLinks {
+        position: absolute;
+        right: 0px;
+        height: 99vh;
+        top: 8vh;
+        background-color: #ffffff94;
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: 0.8s ease;
+        justify-content: space-evenly;
+    }
+    .burger {
+        display: block;
+    }
+    .navigationActive {
+        transform: translate(0);
+    }
+    .navLinks li {
+        opacity: 0%;
+    }
+
+    .imgCard{
+        width: 100%;
+    }
+}
+
+.stuck {
+    overflow: hidden;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+
 }
