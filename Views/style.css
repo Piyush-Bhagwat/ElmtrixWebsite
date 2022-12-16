@@ -157,22 +157,18 @@ img{
 .wrapper .socialButton{
     height: 50px;
     width: 50px;
-    margin: 20px;
+    display: flex;
+    margin: 0 15px;
     border-radius: 30px;
     float: left;
     overflow: hidden;
     background-color: white;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 3px 7px 2px #000;
 }
 
-.wrapper .socialButton .icon{
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-    line-height: 60px;
-    border-radius: 30px; 
-    text-align: center;
-}
 .wrapper i{
     font-size: 2em;
 }   
@@ -182,16 +178,9 @@ img{
     text-decoration: none;
 }
 
-.wrapper span{
-    font-weight: 500;
-    color: #000;
-    font-size: 20px;
-    line-height: 60px;
-}
-
 .wrapper .socialButton:hover{
-    width: 180px;
-
+    transform: translateY(-10px);
+    color: #DA3955;
 }
 
 
