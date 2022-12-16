@@ -290,7 +290,7 @@ img{
     }
 
     h3{
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     p{
@@ -343,7 +343,7 @@ img{
     .navLinks {
         position: absolute;
         right: 0px;
-        height: 99vh;
+        height: 92vh;
         top: 8vh;
         background-color: #ffffff94;
         backdrop-filter: blur(5px);
@@ -366,7 +366,13 @@ img{
     }
 
     .imgCard{
-        width: 100%;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .cardContainer{
+        margin: 0;
+        padding: 0;
     }
 }
 
