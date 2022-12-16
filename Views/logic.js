@@ -1,10 +1,30 @@
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+}
+
+const process = document.querySelector("#process");
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
+        let oldScroll = window.scrollY;
+        let elePos =  window.scrollY - getOffset(entry.target).top;
+        console.log( window.scrollY - getOffset(process).top);
         if(entry.isIntersecting){
             entry.target.classList.add("show");
         }else{
             entry.target.classList.remove("show");
+            if(elePos <0){
+                entry.target.classList.add("hiddenDown")
+                entry.target.classList.remove("hiddenUp");
+
+            }else{
+                entry.target.classList.add("hiddenUp")
+                entry.target.classList.remove("hiddenDown");
+            }
         }
     });
 });

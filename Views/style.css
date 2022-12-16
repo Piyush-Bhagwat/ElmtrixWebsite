@@ -263,11 +263,17 @@ img{
 }
 
 .hidden{
-    opacity: 0;
-    transform: translateX(-10%);
+    opacity: 0.3;
+}
+
+.hiddenUp{
+    transform: translateX(20%);
+}
+.hiddenDown{
+    transform: translateX(-20%);
 }
 .show{
-    transition: all 2s ease 0.3s;
+    transition: all 2s ease;
     transform: translateX(0);
     opacity: 1;
 }
